@@ -1,6 +1,9 @@
 body {
   padding: 0 30px 0 30px;
 }
+h1 {
+  color: purple;
+}
 
 button {
   font-size: 16px;
@@ -26,4 +29,13 @@ table, th, td {
 
 table {
   margin-top: 15px; 
+}
+
+button:hover {
+  box-shadow: 3px 3px 20px red;
+  border: none;
+  }
+
+button:active {
+  background-color: black;
 }

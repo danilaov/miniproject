@@ -40,17 +40,29 @@ function outputData(person) {
   cell_4.innerHTML = person.day + ' ' + person.month + ' 2011';
 
   // REGEX RULES AND ADDING CSS CLASSES TO ROWS FOR TOGGLING
+  // Add a class to royalty
+  if ((new RegExp(/royalty|prince|princess|king|quen|duke/gi)).test(person.profession)) {
+    row.classList.add('royalty');
+  }
   // Add a class to actors
-  if ((new RegExp(/schauspieler/gi)).test(person.profession)) {
+  if ((new RegExp(/actor|actress/gi)).test(person.profession)) {
     row.classList.add('actor');
   }
   // Add a class to Austrians
-  if ((new RegExp(/österreich/gi)).test(person.profession)) {
-    row.classList.add('austrian');
+  if ((new RegExp(/american/gi)).test(person.profession)) {
+    row.classList.add('american');
   }
   // Add a class to Auto*
-  if ((new RegExp(/auto/gi)).test(person.profession)) {
-    row.classList.add('auto');
+  if ((new RegExp(/author/gi)).test(person.profession)) {
+    row.classList.add('author');
+  }
+  // Add a class to English
+  if ((new RegExp(/English|british/gi)).test(person.profession)) {
+    row.classList.add('english');
+  }
+  // Add a class to Goverment
+  if ((new RegExp(/president|minister/gi)).test(person.profession)) {
+    row.classList.add('goverment');
   }
 
 }
